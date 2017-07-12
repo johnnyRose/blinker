@@ -12,6 +12,7 @@ def setup():
     GPIO.output(LedPin, GPIO.HIGH)
 
 def blink():
+    print("Blinking eternally! Press Ctrl+C to kill me.")
     while True:
         GPIO.output(LedPin, GPIO.HIGH) # on
         time.sleep(1)
