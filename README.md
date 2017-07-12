@@ -23,12 +23,17 @@ If you've never set up a Raspberry Pi, or it's been a while, hopefully these ins
     sudo apt-get install git
 ```
 
+Note that it's probably not required to upgrade all your packages, but it probably won't hurt, either. Also, while this _will_ work with Python 2, I prefer to use Python 3. Embrace the future!
+
 6. Clone the git repo, which I assume you already found: `git clone https://github.com/johnnyRose/blinker.git`
 
 7. Set up the hardware. This program uses pin 11 for power and pin 9 for ground. You should probably turn off your device so you don't accidentally fry anything.
 
-`pin 11 (power) -> 220 ohm resistor -> standard red LED -> pin 9 (ground)`
+`pin 11 (power) -> 220 Ohm resistor* -> standard red LED -> pin 9 (ground)`
 
 8. All done! Run the program with `python3 blinker.py`. You can press Ctrl+C at any point to kill it.
 
+---
+
+*_We use Ohm's Law (Resistance = Voltage / Amperage) to calculate 220 Ohms. We know the output of GPIO pin 11 is 3.3 volts, but the LED only supports a maximum of 2 volts/20 milliamps. So, we plug it into `R = V / I` and we find that the required resistance is 3.3V/0.020A = 165 Ohms. I don't have a 165 Ohm resistor - the lowest I have is 220 Ohms - so I use that instead. The LED will still light up, but we don't need to worry about breaking it. Science!_
 
