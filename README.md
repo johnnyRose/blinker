@@ -1,6 +1,8 @@
 # blinker
 A blinking LED tutorial for the Raspberry Pi!
 
+![Use your blinker!](http://s2.quickmeme.com/img/d2/d24c1158ea222ce28b02507182b2ce132545baa745343ff028b70e966d8e772e.jpg "Use your blinker!")
+
 ## Getting Started
 
 If you've never set up a Raspberry Pi, or it's been a while, hopefully these instructions can help you get moving quickly.
